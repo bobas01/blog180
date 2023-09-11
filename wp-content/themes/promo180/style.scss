@@ -1,0 +1,661 @@
+/*
+Theme Name: Promo 180
+Theme URI: 
+Author: sequeira alexandre
+Description: my theme
+Tags: responsive web design
+*/
+
+$roboto: 'Roboto', sans-serif;
+$fontTitle : 'Pacifico',
+cursive;
+$red : #D31E44;
+$black: #000;
+$grey: #6a6f8c;
+$inherit: inherit;
+$white: #fff;
+
+h1,
+h2,
+h4 {
+    font-family: $fontTitle;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2,
+h4 {
+    font-size: 1.2rem;
+}
+
+p {
+    font-family: $roboto;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+figcaption {
+    text-align: center;
+    font-family: $fontTitle;
+    font-size: 1rem;
+    color: $black;
+}
+
+.article {
+    width: 80%;
+    margin: 50px auto;
+
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+.row-limit-size {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+//header phone
+
+header {
+
+    #logoBurger {
+        display: flex;
+
+        justify-content: space-between;
+        margin: 25px 0;
+
+        #logo img {
+            width: 75px;
+            margin-left: 20px;
+        }
+
+
+        #menuBurger {
+            width: 50px;
+            margin-right: 20px;
+            display: block;
+        }
+    }
+
+
+    nav {
+        #menu-menu-1 {
+            display: none;
+
+
+
+        }
+
+        #menu-menu-1.active {
+            display: block;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            li {
+                background-color: $red;
+                border: 1px solid $white;
+                padding: 20px 0;
+                text-align: center;
+                width: 300px;
+
+
+
+                a {
+                    font-family: $fontTitle;
+                    font-size: 1.5rem;
+                    color: $white;
+                    padding: 20px 0;
+                }
+            }
+
+
+        }
+    }
+
+}
+
+#hero img {
+    width: 100%;
+    height: 200px;
+}
+
+//header desktop
+@media screen and (min-width:800px) {
+    header {
+        display: flex;
+        justify-content: center;
+
+        #logoBurger {
+            display: flex;
+            justify-content: space-between;
+            margin: 25px 0;
+
+            #logo img {
+                width: 75px;
+                margin-right: 50px;
+            }
+
+
+            #menuBurger {
+                display: none;
+            }
+        }
+
+
+        nav {
+            #menu-menu-1 {
+                display: block;
+                display: flex;
+                width: 70%;
+
+
+                li {
+                    background-color: unset;
+                    border: unset;
+                    padding: 20px 50px;
+                    text-align: center;
+                    width: 150px;
+
+
+
+                    a {
+                        color: $black;
+                        padding: 20px 0;
+                        font-family: $fontTitle;
+                        font-size: 1.5rem;
+                    }
+                }
+
+            }
+
+
+        }
+
+    }
+
+    #hero img {
+        width: 100%;
+        height: unset;
+    }
+}
+
+//homepage stagiaire phone
+
+#stagiaireHomepage {
+    #roster {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1050px;
+        margin: 0 auto;
+
+        a,
+        .picStagiaire {
+            margin: 0 auto 50px auto;
+            width: 150px;
+            cursor: pointer;
+
+            figcaption {
+                text-align: center;
+                font-size: 1rem;
+                font-family: $fontTitle;
+                color: $black;
+            }
+        }
+    }
+}
+
+//actuality homepage phone
+
+.articleActuality {
+    width: 80%;
+    margin: 0 auto 50px auto;
+
+
+    figure {
+        img {
+            width: 100%;
+        }
+
+        figcaption {
+            font-size: 0.8rem;
+            font-family: $roboto;
+            margin-bottom: 10px;
+
+            .categorySpan a {
+                color: #4B7AA6;
+            }
+
+            .date {
+                color: #8F8F8F;
+            }
+        }
+    }
+
+    .txtArticleActuality .linkArticle {
+        color: $black;
+        font-family: $roboto;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 1.2rem;
+    }
+}
+
+//actuality homepage desktop
+@media screen and (min-width:600px) {
+    .articleActuality {
+        width: 80%;
+        margin: 0 auto 50px auto;
+        display: flex;
+        justify-content: space-between;
+
+        figure {
+            width: 30%;
+
+            img {
+                width: 100%;
+            }
+
+
+        }
+
+        .txtArticleActuality {
+            width: 60%;
+        }
+    }
+}
+
+//footer 
+footer {
+    background-color: $red;
+
+    h2 {
+
+        color: $white;
+        font-family: $roboto;
+        font-size: 1rem;
+
+    }
+
+    #footerHead {
+        h2 {
+            margin: 0 0 20px 50px;
+            padding-top: 50px;
+        }
+
+
+        form {
+            margin-left: 50px;
+            padding-bottom: 20px;
+            max-width: 570px;
+
+            input {
+                height: 30px;
+                font-family: $roboto;
+            }
+
+            input[type=email] {
+                width: 50%;
+            }
+
+            input[type=submit] {
+                width: 30%;
+                margin-left: -10px;
+                background-color: $black;
+                color: $white;
+                font-weight: 700;
+            }
+        }
+    }
+    .footerWidget{
+        h2{
+            margin: 0 0 20px 50px;
+        }
+        .footer-icons {
+            padding-bottom: 50px;
+           i:first-child {
+            margin-left: 50px;
+           } 
+           .lni {
+            color: $white;
+            margin-right: 10px;
+           }
+        }
+        
+    }
+}
+
+
+@media screen and (min-width:800px) {
+    footer{
+        display: flex;
+        justify-content:space-evenly;
+        #footerHead {    
+            form {    
+                input[type=email] {
+                    width: 70%;
+                }                
+            }
+        }
+        .footerWidget {
+            margin: 50px 50px 0 0 ;
+        }
+    }
+    
+}
+//page stagiaire phone
+
+#detailsStagiaire {
+    margin-top: 50px;
+
+    .detailsStagiaire {
+
+
+        .picStagiaire {
+            margin: 0 auto;
+            width: 200px;
+
+
+            figcaption {
+                text-align: center;
+                font-family: $fontTitle;
+                font-size: 1rem;
+            }
+        }
+
+        .txtStagiaire {
+
+            .article h2 {
+                text-align: center;
+                padding-bottom: 25px;
+            }
+
+            .linkeGit {
+                a img {
+                    margin: 0 10px
+                }
+
+            }
+        }
+
+
+
+
+    }
+
+}
+
+//page stagiaire desktop
+
+@media screen and (min-width:1000px) {
+    #detailsStagiaires {
+        .detailsStagiaire {
+            display: flex;
+
+            .picStagiaire {
+                figcaption {
+                    text-align: center;
+                    font-family: $fontTitle;
+                    font-size: 1.2rem;
+                }
+            }
+
+            .linkStagiaire {
+                display: flex;
+
+                a {
+                    margin-left: 100px;
+                }
+
+                .linkeGit a:last-child {
+                    margin-left: 10px;
+                }
+            }
+
+
+
+
+
+        }
+
+    }
+
+}
+
+//category phone
+#categoryList {
+    margin: 50px auto;
+
+    #categoryListContainer {
+        .oneCategory {
+            padding-bottom: 50px;
+
+            a {
+                color: $black;
+
+                figure img {
+                    width: 200px;
+                    margin: 0 auto;
+                    display: block;
+                }
+
+                article {
+                    h2 {
+
+                        text-align: center;
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+//category desktop
+@media screen and (min-width:900px) {
+    #categoryList {
+        #categoryListContainer {
+            display: grid;
+            grid-template-columns: 250px 250px 250px;
+            grid-auto-rows: auto;
+            grid-gap: 10px;
+            justify-content: center;
+
+            .oneCategory {
+                padding-bottom: 50px;
+
+                a {
+                    color: $black;
+
+                    figure img {
+                        width: 200px;
+                        margin: 0 auto;
+                        display: block;
+                        height: 175px;
+                    }
+
+                    article {
+                        h2 {
+
+                            text-align: center;
+                            margin-bottom: 25px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+//exemple article phone
+#exempleArticle {
+    margin: 50px auto;
+
+    h1 {
+        width: 80%;
+        margin: 0 auto 30px auto;
+    }
+
+    img {
+        width: 80%;
+        margin: 30px auto 0 auto;
+        display: block;
+        height: auto;
+    }
+
+    figcaption {
+        margin-left: 100px;
+        font-size: 0.8rem;
+        font-family: $roboto;
+        margin-bottom: 10px;
+
+        .categorySpan a {
+            color: #4B7AA6;
+        }
+
+        .date {
+            color: #8F8F8F;
+        }
+    }
+
+    h2 {
+        margin: 30px 0;
+    }
+
+    ul li {
+        list-style: square;
+        margin-left: 30px;
+        font-family: $roboto;
+    }
+
+    ul li:first-child {
+        margin-top: 10px;
+    }
+
+    ul li:last-child {
+        margin-bottom: 25px;
+    }
+
+    .postContent p:last-child {
+        font-weight: 700;
+        margin-top: 50px;
+    }
+
+    #buton {
+        width: 80%;
+        margin: 0 auto;
+
+        button {
+            width: 300px;
+            border: 1px solid $red;
+            height: 35px;
+            font-family: $roboto;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        button:first-child {
+            color: $white;
+            background-color: $red;
+            margin-bottom: 25px;
+
+            &>:hover {
+                color: $red;
+                background-color: $white;
+            }
+
+        }
+
+        button:last-child {
+            color: $red;
+            background-color: $white;
+
+            &>:hover {
+                color: $white;
+                background-color: $red;
+            }
+
+        }
+    }
+}
+
+
+//404phone
+
+#error404 {
+    height: 100vh;
+    background-color: $red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+        width: 100%;
+        min-width: 200px;
+        max-width: 500px;
+
+        h1,
+        p,
+        button,
+        a {
+            font-family: $roboto;
+            font-weight: 700;
+        }
+
+        h1,
+        p {
+            color: $white;
+        }
+
+        h1 {
+            font-size: 8rem;
+        }
+
+        p {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        button {
+            width: 150px;
+            border: 1px solid $white;
+            height: 30px;
+            margin: 25px auto;
+            display: block;
+            background-color: $red;
+            border-radius: 25px;
+
+            a {
+                color: $white;
+            }
+
+            &:hover {
+                border: $red;
+                color: $red;
+                background-color: $white;
+
+                a {
+                    color: $red;
+                }
+            }
+        }
+    }
+}
