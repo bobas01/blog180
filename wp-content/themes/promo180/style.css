@@ -28,6 +28,10 @@ p {
   text-align: justify;
 }
 
+a {
+  color: #000;
+}
+
 figcaption {
   text-align: center;
   font-family: "Pacifico", cursive;

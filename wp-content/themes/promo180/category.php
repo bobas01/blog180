@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <section id=actualityHomepage class="allArticle row-limit-size">
-        
+        <h1><?php the_category(', '); ?></h1>
         <?php
 
         if (have_posts()) {

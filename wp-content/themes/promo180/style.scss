@@ -19,6 +19,7 @@ h1,
 h2,
 h4 {
     font-family: $fontTitle;
+    
 }
 
 h1 {
@@ -36,6 +37,9 @@ p {
     font-family: $roboto;
     font-size: 1rem;
     text-align: justify;
+}
+a{
+    color: $black;
 }
 
 figcaption {
