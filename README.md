@@ -1,2 +1,2 @@
-# blog180
+# promo180
 blog de promo
