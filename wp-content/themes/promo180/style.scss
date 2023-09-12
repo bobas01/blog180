@@ -19,7 +19,7 @@ h1,
 h2,
 h4 {
     font-family: $fontTitle;
-    
+
 }
 
 h1 {
@@ -38,7 +38,8 @@ p {
     font-size: 1rem;
     text-align: justify;
 }
-a{
+
+a {
     color: $black;
 }
 
@@ -327,42 +328,54 @@ footer {
             }
         }
     }
-    .footerWidget{
-        h2{
+
+    .footerWidget {
+        h2 {
             margin: 0 0 20px 50px;
         }
+
         .footer-icons {
             padding-bottom: 50px;
-           i:first-child {
-            margin-left: 50px;
-           } 
-           .lni {
-            color: $white;
-            margin-right: 10px;
-           }
+
+            a:first-child {
+                margin-left: 50px;
+            }
+
+            a {
+                margin-right: 10px;
+
+                .lni {
+                    color: $white;
+
+                }
+            }
+
         }
-        
+
     }
 }
 
 
 @media screen and (min-width:800px) {
-    footer{
+    footer {
         display: flex;
-        justify-content:space-evenly;
-        #footerHead {    
-            form {    
+        justify-content: space-evenly;
+
+        #footerHead {
+            form {
                 input[type=email] {
                     width: 70%;
-                }                
+                }
             }
         }
+
         .footerWidget {
-            margin: 50px 50px 0 0 ;
+            margin: 50px 50px 0 0;
         }
     }
-    
+
 }
+
 //page stagiaire phone
 
 #detailsStagiaire {

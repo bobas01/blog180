@@ -243,12 +243,14 @@ footer .footerWidget h2 {
 footer .footerWidget .footer-icons {
   padding-bottom: 50px;
 }
-footer .footerWidget .footer-icons i:first-child {
+footer .footerWidget .footer-icons a:first-child {
   margin-left: 50px;
 }
-footer .footerWidget .footer-icons .lni {
-  color: #fff;
+footer .footerWidget .footer-icons a {
   margin-right: 10px;
+}
+footer .footerWidget .footer-icons a .lni {
+  color: #fff;
 }
 
 @media screen and (min-width: 800px) {

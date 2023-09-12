@@ -28,13 +28,13 @@ function afficher_icones_dans_footer() {
     $table_name = $wpdb->prefix . 'socialMedia';
   
     // Récupérer les icônes depuis la base de données
-    $icones = $wpdb->get_results("SELECT icon_socialMedia FROM $table_name");
+    $icones = $wpdb->get_results("SELECT icon_socialMedia, link_socialMedia FROM $table_name");
   
     if ($icones) {
         echo '<div class="footer-icons">';
         foreach ($icones as $icone) {
             // Afficher chaque icône dans une balise <i> avec la classe correspondante
-            echo '<i class="' . esc_attr($icone->icon_socialMedia) . '"></i>';
+            echo '<a href="'.esc_attr($icone->link_socialMedia).'"><i class="' . esc_attr($icone->icon_socialMedia) . '"></i></a>';
         }
         echo '</div>';
     }
